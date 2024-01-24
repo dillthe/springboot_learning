@@ -1,0 +1,21 @@
+package com.github.supercoding.web.dto;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+
+public class Item {
+    @ApiModelProperty(name = "id", value = "Item Id", example = "1") private String id;
+    @ApiModelProperty(name = "name", value = "Item 이름", example = "Dell XPS 15") private String name;
+    @ApiModelProperty(name = "type", value = "Item 타입", example = "Laptop") private String type;
+    @ApiModelProperty(name = "price", value = "Item 가격", example = "125000") private Integer price;
+    private Spec spec;
+
+}

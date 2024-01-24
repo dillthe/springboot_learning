@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/chapter_97
+    username: root
+    password: 8282
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#spring:
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
+#
+  logging:
+    config: classpath:logback-spring-local.xml
+#스프링부트3에서는 안해도 된다고 배움..?
+
+
