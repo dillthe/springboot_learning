@@ -68,8 +68,8 @@ public class AirlineTicket {
         return ticketId != null && Objects.equals(ticketId, that.ticketId);
     }
 
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
+        @Override
+        public int hashCode() {
+            return getClass().hashCode();
+        }
     }
-}

@@ -66,6 +66,12 @@ public class ElectronicStoreController {
 
     }
 
+    @Operation(summary = "Item ids 수정")
+    @PutMapping("/items/{id}")
+    public Item updateItem(@PathVariable("id") String id, @RequestBody ItemBody itemBody){
+        return electronicStoreItemService.updateItem(id, itemBody);
+    }
+
     @Operation(summary = "Item id로 삭제")
     @DeleteMapping("/items/{id}")
     public String deleteItemByPathId(
@@ -75,11 +81,7 @@ public class ElectronicStoreController {
         return "Object with id =" + id + "has been deleted";
     }
 
-    @Operation(summary = "Item ids 수정")
-    @PutMapping("/items/{id}")
-    public Item updateItem(@PathVariable("id") String id, @RequestBody ItemBody itemBody){
-        return electronicStoreItemService.updateItem(id, itemBody);
-    }
+
 
     @Operation(summary = "Item 구매")
     @PostMapping("/items/buy")
